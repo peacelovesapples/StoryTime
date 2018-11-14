@@ -48,5 +48,6 @@
         android:layout_alignStart="@+id/buttons"
         android:layout_alignParentTop="true"
         android:layout_marginTop="182dp"
-        android:text="TextView" />
+        android:text="StoryTime"
+        android:textSize="32sp" />
 </RelativeLayout>
