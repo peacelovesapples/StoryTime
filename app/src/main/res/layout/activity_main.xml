@@ -11,7 +11,9 @@
         android:id="@+id/buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="122dp"
         android:orientation="vertical">
 
         <Button
@@ -38,4 +40,13 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="154dp"
+        android:layout_height="41dp"
+        android:layout_alignStart="@+id/buttons"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="182dp"
+        android:text="TextView" />
 </RelativeLayout>
