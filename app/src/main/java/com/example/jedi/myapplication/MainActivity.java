@@ -19,7 +19,9 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     Button camera;
+    Button gallery;
     static final int REQUEST_IMAGE_CAPTURE = 1;
+    public static final int PICK_IMAGE = 2;
     ImageView mImageView;
     String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mImageView = (ImageView) findViewById(R.id.taken_pic);
 
         camera = (Button) findViewById(R.id.camera_button);
+        gallery = (Button) findViewById(R.id.gallery_button);
 
         camera.setOnClickListener(new View.OnClickListener() {
                   @Override
@@ -41,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
               }
 
         );
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+        });
 
     }
     private void dispatchTakePictureIntent() {
@@ -59,18 +68,29 @@ public class MainActivity extends AppCompatActivity {
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
-                //galleryAddPic();
             }
         }
     }
-    /*@Override
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+           // Bundle extras = data.getExtras();
+            //Bitmap imageBitmap = (Bitmap) extras.get("data");
+           // mImageView.setImageBitmap(imageBitmap);
+            galleryAddPic();
+        } else if (requestCode == PICK_IMAGE) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             mImageView.setImageBitmap(imageBitmap);
         }
-    }*/
+    }
+    private void openGallery() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+    }
+
     private void galleryAddPic() {
         Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
         File f = new File(mCurrentPhotoPath);
@@ -92,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = image.getAbsolutePath();
+        //galleryAddPic();
         return image;
     }
 

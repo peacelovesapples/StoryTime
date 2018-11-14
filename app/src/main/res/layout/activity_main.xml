@@ -14,6 +14,13 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         />
+    <Button
+        android:id="@+id/gallery_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        />
+
     <ImageView
         android:id="@+id/taken_pic"
         android:layout_width="wrap_content"
