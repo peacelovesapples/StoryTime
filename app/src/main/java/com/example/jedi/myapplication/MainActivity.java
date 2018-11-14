@@ -79,9 +79,16 @@ public class MainActivity extends AppCompatActivity {
            // mImageView.setImageBitmap(imageBitmap);
             galleryAddPic();
         } else if (requestCode == PICK_IMAGE) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mImageView.setImageBitmap(imageBitmap);
+            //Bundle extras = data.getExtras();
+            //Bitmap imageBitmap = (Bitmap) extras.get("data");
+            //mImageView.setImageBitmap(imageBitmap);
+            System.out.println("in pick image");
+            Uri selectedimg = data.getData();
+            try {
+                mImageView.setImageBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedimg));
+            } catch (IOException ex) {
+                System.out.println(ex.getMessage());
+            }
         }
     }
     private void openGallery() {
