@@ -23,17 +23,18 @@
             android:src="@drawable/storytime" />
 
         <ImageView
-            android:id="@+id/group"
-            android:layout_width="246dp"
-            android:layout_height="61dp"
-            android:src="@drawable/aboutus" />
-
-        <ImageView
-            android:id="@+id/rectangle"
+            android:id="@+id/home_start"
             android:layout_width="246dp"
             android:layout_height="61dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/start" />
+
+        <ImageView
+            android:id="@+id/group"
+            android:layout_width="246dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/aboutus" />
 
 
         <!--<Button

@@ -21,6 +21,7 @@ import java.util.Date;
 public class MainActivity extends Activity {
     Button camera;
     Button gallery;
+    ImageView home_start;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final int PICK_IMAGE = 2;
     ImageView mImageView;
@@ -31,7 +32,17 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        home_start = (ImageView) findViewById(R.id.home_start);
+
+        home_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ChooseActivity.class);
+                startActivity(intent);
+            }
+        });
         //mImageView = (ImageView) findViewById(R.id.taken_pic);
+
 
         //camera = (Button) findViewById(R.id.camera_button);
         //gallery = (Button) findViewById(R.id.gallery_button);
