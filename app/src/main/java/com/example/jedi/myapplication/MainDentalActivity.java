@@ -9,29 +9,19 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class ChooseActivity extends Activity {
+public class MainDentalActivity extends Activity {
     ImageView goback;
-    LinearLayout dental_choice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_choose);
-
-        goback = (ImageView) findViewById(R.id.go_back_choose);
+        setContentView(R.layout.activity_main_dental);
+        goback = (ImageView) findViewById(R.id.go_back_dental);
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 go_back(v);
-            }
-        });
-        dental_choice = (LinearLayout) findViewById(R.id.dental_choice);
-
-        dental_choice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ChooseActivity.this, MainDentalActivity.class );
-                startActivity(intent);
             }
         });
     }

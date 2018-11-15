@@ -29,7 +29,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChooseActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
-        <activity android:name=".MainLunchActivity"></activity>
+        <activity android:name=".MainDentalActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>
