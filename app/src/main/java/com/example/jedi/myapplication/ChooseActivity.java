@@ -1,9 +1,10 @@
 package com.example.jedi.myapplication;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ChooseActivity extends AppCompatActivity {
+public class ChooseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

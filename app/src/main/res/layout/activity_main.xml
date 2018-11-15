@@ -5,18 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
 
     <LinearLayout
         android:id="@+id/buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="122dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <Button
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="183dp"
+            android:layout_height="69dp"
+            android:src="@drawable/storytime" />
+
+        <ImageView
+            android:id="@+id/group"
+            android:layout_width="246dp"
+            android:layout_height="61dp"
+            android:src="@drawable/aboutus" />
+
+        <ImageView
+            android:id="@+id/rectangle"
+            android:layout_width="246dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/start" />
+
+
+        <!--<Button
             android:id="@+id/camera_button"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -29,25 +49,16 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/camera_button"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="50dp" />
+            android:layout_marginBottom="50dp" /> -->
     </LinearLayout>
 
-    <ImageView
+    <!-- <ImageView
         android:id="@+id/taken_pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/buttons"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="100dp"/> -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="154dp"
-        android:layout_height="41dp"
-        android:layout_alignStart="@+id/buttons"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="182dp"
-        android:text="StoryTime"
-        android:textSize="32sp" />
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.example.jedi.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     Button camera;
     Button gallery;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -30,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mImageView = (ImageView) findViewById(R.id.taken_pic);
+        //mImageView = (ImageView) findViewById(R.id.taken_pic);
 
-        camera = (Button) findViewById(R.id.camera_button);
-        gallery = (Button) findViewById(R.id.gallery_button);
+        //camera = (Button) findViewById(R.id.camera_button);
+        //gallery = (Button) findViewById(R.id.gallery_button);
 
-        camera.setOnClickListener(new View.OnClickListener() {
+        /*camera.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
                       dispatchTakePictureIntent();
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 openGallery();
             }
         });
-
+    */
     }
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
