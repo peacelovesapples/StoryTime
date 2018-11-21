@@ -1,32 +1,66 @@
 package com.example.jedi.myapplication;
 
+import android.content.Context;
 import android.media.Image;
 
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 public class Story implements Serializable {
 
+    Scanner scanner;
     public String fileName;
-    private boolean isEnd = false; // delete this later.
 
-    public Story(String fileName) {
+    String description;
+    ArrayList<StoryOption> options;
+    boolean endOfGameFlag = false;
+
+    public Story(Context context, String fileName) {
         this.fileName = fileName;
-    }
 
-    public void reset() {
-        // TODO: reset the scanner
+        try {
+            DataInputStream textFileStream = new DataInputStream(context.getAssets().open(fileName));
+            scanner = new Scanner(textFileStream);
+        } catch (IOException e) {
+            scanner = null;
+        }
+        nextSequence();
     }
 
     public void nextSequence() {
-        isEnd = true;
+        if (isEnd()) {
+            return;
+        }
+        description = scanner.nextLine();
+        options = new ArrayList<StoryOption>(3);
+        options.add(new StoryOption(true, scanner.nextLine(), scanner.nextLine()));
+        options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine()));
+        options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine()));
+
+        if (scanner.hasNextLine()) {
+            scanner.nextLine();
+        }
+
+        Collections.shuffle(options);
     }
 
     public boolean isEnd() {
-        return isEnd; // check if we've parsed the end of the file.
+        if (!scanner.hasNextLine()) {
+            boolean retVal = endOfGameFlag;
+            endOfGameFlag = true;
+            return retVal;
+        }
+        return false;
     }
 
     public String getDescriptionText() {
-        return "When you walk into the dentist, Kevin the receptionist waves at you.";
+        return description;
     }
 
 //    public Image getDescriptionImage() {
@@ -34,10 +68,14 @@ public class Story implements Serializable {
 //    }
 
     public StoryOption getOptionOne() {
-        return new StoryOption(true, "Wave back", "Great job! It's polite to wave back!");
+        return options.get(0);
     }
 
     public StoryOption getOptionTwo() {
-        return new StoryOption(false, "Walk away", "Some people might think it's rude if you walk away when they wave. Let's try it again!");
+        return options.get(1);
+    }
+
+    public StoryOption getOptionThree() {
+        return options.get(2);
     }
 }

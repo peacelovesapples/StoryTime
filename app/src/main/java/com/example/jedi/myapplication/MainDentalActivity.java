@@ -37,7 +37,7 @@ public class MainDentalActivity extends Activity {
     public void go_back(View view) {super.finish();}
     public void play() {
         Intent intent = new Intent(MainDentalActivity.this, GameChoiceActivity.class );
-        intent.putExtra("fileName", "hubba hubba");
+        intent.putExtra("fileName", "dentist.txt");
         startActivity(intent);
     }
 }

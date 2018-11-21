@@ -16,6 +16,7 @@ public class GameExplanationActivity extends AppCompatActivity {
     TextView actionText;
 
     boolean isEndOfGame;
+    boolean isCorrectChoice;
     String fileName;
 
     @Override
@@ -30,6 +31,7 @@ public class GameExplanationActivity extends AppCompatActivity {
         actionText = findViewById(R.id.actionText);
 
         isEndOfGame = getIntent().getBooleanExtra("isEndOfGame", false);
+        isCorrectChoice = getIntent().getBooleanExtra("isCorrectChoice", false);
         fileName = getIntent().getStringExtra("fileName");
 
         descriptionText.setText(getIntent().getStringExtra("description"));
@@ -62,7 +64,7 @@ public class GameExplanationActivity extends AppCompatActivity {
     }
 
     private void action() {
-        if (isEndOfGame) {
+        if (isEndOfGame && isCorrectChoice) {
             Intent intent = new Intent(GameExplanationActivity.this, EndGameActivity.class );
             intent.putExtra("fileName", fileName);
             startActivity(intent);
