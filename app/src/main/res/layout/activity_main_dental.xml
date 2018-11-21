@@ -41,7 +41,9 @@
             android:layout_height="33dp"
             android:layout_marginTop="15dp"
             android:src="@drawable/lunchtimetext" />
+
         <ImageView
+            android:id="@+id/play"
             android:layout_width="296dp"
             android:layout_height="61dp"
             android:layout_marginTop="15dp"
