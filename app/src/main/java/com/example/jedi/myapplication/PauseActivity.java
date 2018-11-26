@@ -1,5 +1,6 @@
 package com.example.jedi.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class PauseActivity extends AppCompatActivity {
+public class PauseActivity extends Activity {
 
     TextView resumeText;
     ImageView resumeBack;

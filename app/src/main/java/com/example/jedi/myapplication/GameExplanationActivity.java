@@ -1,5 +1,6 @@
 package com.example.jedi.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GameExplanationActivity extends AppCompatActivity {
+public class GameExplanationActivity extends Activity {
 
     ImageView pauseButton;
     ImageView descriptionImage;
