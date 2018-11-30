@@ -44,7 +44,8 @@
         <activity android:name=".PauseActivity" />
         <activity android:name=".GameChoiceActivity" />
         <activity android:name=".EndGameActivity" />
-        <activity android:name=".GameExplanationActivity"></activity>
+        <activity
+            android:name=".GameExplanationActivity"/>
     </application>
 
 </manifest>
