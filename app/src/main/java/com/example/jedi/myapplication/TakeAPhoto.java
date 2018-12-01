@@ -2,7 +2,6 @@ package com.example.jedi.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -10,7 +9,6 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.File;
@@ -18,10 +16,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends Activity {
-    Button camera;
-    Button gallery;
-    ImageView home_start;
+public class TakeAPhoto extends Activity {
+    ImageView cam;
+    ImageView gallery;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final int PICK_IMAGE = 2;
     ImageView mImageView;
@@ -31,43 +28,36 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        home_start = (ImageView) findViewById(R.id.home_start);
+        setContentView(R.layout.activity_take_aphoto);
+        mImageView = (ImageView) findViewById(R.id.taken_pic);
 
-        home_start.setOnClickListener(new View.OnClickListener() {
+        cam = findViewById(R.id.cameraBack);
+        gallery = findViewById(R.id.gallery);
+
+        cam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TakeAPhoto.class);
-                startActivity(intent);
+                dispatchTakePictureIntent();
             }
         });
-        //mImageView = (ImageView) findViewById(R.id.taken_pic);
 
-
-        //camera = (Button) findViewById(R.id.camera_button);
-        //gallery = (Button) findViewById(R.id.gallery_button);
-
-        /*camera.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-                      dispatchTakePictureIntent();
-                      System.out.println("eat me");
-                  }
-              }
-
-        );
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGallery();
             }
         });
-    */
+
+
     }
+
+
+
+
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                File photoFile = null;
+            File photoFile = null;
             try {
                 photoFile = createImageFile();
             } catch (IOException ex) {
@@ -86,9 +76,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-           // Bundle extras = data.getExtras();
+            // Bundle extras = data.getExtras();
             //Bitmap imageBitmap = (Bitmap) extras.get("data");
-           // mImageView.setImageBitmap(imageBitmap);
+            // mImageView.setImageBitmap(imageBitmap);
             galleryAddPic();
         } else if (requestCode == PICK_IMAGE) {
             //Bundle extras = data.getExtras();
@@ -134,5 +124,4 @@ public class MainActivity extends Activity {
         //galleryAddPic();
         return image;
     }
-
 }
