@@ -66,9 +66,9 @@
                 android:src="@drawable/smallgirltooth"
                 />
             <ImageView
-                android:layout_width="114dp"
-                android:layout_height="33dp"
-                android:src="@drawable/lunchtimetext"/>
+                android:layout_width="94dp"
+                android:layout_height="23dp"
+                android:src="@drawable/dentist"/>
 
         </LinearLayout>
 
