@@ -2,11 +2,16 @@ package com.example.jedi.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.File;
 
 public class GameExplanationActivity extends AppCompatActivity {
 
@@ -57,6 +62,18 @@ public class GameExplanationActivity extends AppCompatActivity {
                 action();
             }
         });
+
+       // kid.setIm
+        File sdCardDirectory = Environment.getExternalStorageDirectory();
+        File new_image = new File(sdCardDirectory, "selected.png");
+        if (new_image.exists()) {
+            ImageView kid = findViewById(R.id.imageView4);
+            kid.setImageBitmap(BitmapFactory.decodeFile(new_image.getAbsolutePath()));
+
+        }
+    }
+    private void load_pic() {
+
     }
 
     private void pause() {
