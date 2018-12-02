@@ -1,73 +1,86 @@
 package com.example.jedi.myapplication;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MainActivity extends Activity {
-    Button camera;
-    Button gallery;
-    ImageView home_start;
+public class TakeAPhoto extends Activity {
+    ImageView cam;
+    ImageView gallery;
+    ImageView next;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final int PICK_IMAGE = 2;
     ImageView mImageView;
     String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
+    static final int REQUEST_WRITE = 3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        home_start = (ImageView) findViewById(R.id.home_start);
+        setContentView(R.layout.activity_take_aphoto);
+        next = (ImageView) findViewById(R.id.skip);
+        mImageView = (ImageView) findViewById(R.id.taken_pic);
 
-        home_start.setOnClickListener(new View.OnClickListener() {
+        cam = findViewById(R.id.cameraBack);
+        gallery = findViewById(R.id.gallery);
+
+        cam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TakeAPhoto.class);
-                startActivity(intent);
+                dispatchTakePictureIntent();
             }
         });
-        //mImageView = (ImageView) findViewById(R.id.taken_pic);
 
-
-        //camera = (Button) findViewById(R.id.camera_button);
-        //gallery = (Button) findViewById(R.id.gallery_button);
-
-        /*camera.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-                      dispatchTakePictureIntent();
-                      System.out.println("eat me");
-                  }
-              }
-
-        );
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openGallery();
             }
         });
-    */
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(TakeAPhoto.this, ChooseActivity.class);
+                startActivity(intent1);
+            }
+        });
+
+
     }
+
+
+
+
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                File photoFile = null;
+            File photoFile = null;
             try {
                 photoFile = createImageFile();
             } catch (IOException ex) {
@@ -83,12 +96,13 @@ public class MainActivity extends Activity {
             }
         }
     }
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-           // Bundle extras = data.getExtras();
+            // Bundle extras = data.getExtras();
             //Bitmap imageBitmap = (Bitmap) extras.get("data");
-           // mImageView.setImageBitmap(imageBitmap);
+            // mImageView.setImageBitmap(imageBitmap);
             galleryAddPic();
         } else if (requestCode == PICK_IMAGE) {
             //Bundle extras = data.getExtras();
@@ -98,10 +112,48 @@ public class MainActivity extends Activity {
             Uri selectedimg = data.getData();
             try {
                 mImageView.setImageBitmap(MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedimg));
+                //save picture
+                int permissionCheck = ContextCompat.checkSelfPermission(TakeAPhoto.this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+                if (permissionCheck != PackageManager.PERMISSION_GRANTED ) {
+                    ActivityCompat.requestPermissions(TakeAPhoto.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE);
+                }
+
+                save_to_disk(mImageView);
+                //Intent intent = new Intent(TakeAPhoto.this, GameChoiceActivity.class);
+                //startActivity(intent);
+
+
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
             }
         }
+    }
+    private void save_to_disk(ImageView image) {
+        BitmapDrawable drawable = (BitmapDrawable) mImageView.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
+
+        File sdCardDirectory = Environment.getExternalStorageDirectory();
+        File new_image = new File(sdCardDirectory, "selected.png");
+
+        boolean success = false;
+
+        FileOutputStream outStream;
+        try {
+            outStream = new FileOutputStream(new_image);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+
+
+            outStream.flush();
+            outStream.close();
+            success = true;
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
     private void openGallery() {
         Intent intent = new Intent();
@@ -134,5 +186,4 @@ public class MainActivity extends Activity {
         //galleryAddPic();
         return image;
     }
-
 }
