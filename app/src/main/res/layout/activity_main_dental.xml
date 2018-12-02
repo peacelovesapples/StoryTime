@@ -48,7 +48,9 @@
             android:layout_height="61dp"
             android:layout_marginTop="15dp"
             android:src="@drawable/play" />
+
         <ImageView
+            android:id="@+id/watch"
             android:layout_width="296dp"
             android:layout_height="61dp"
             android:layout_marginTop="10dp"

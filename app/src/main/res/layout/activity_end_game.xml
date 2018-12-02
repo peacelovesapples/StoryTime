@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/darkrectangle" />
+        app:srcCompat="@drawable/greenbackground" />
 
     <ImageView
         android:id="@+id/replayBack"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homeBack"
-        app:srcCompat="@drawable/darkrectangle" />
+        app:srcCompat="@drawable/darkbluebackground" />
 
     <ImageView
         android:id="@+id/creditsBack"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/replayBack"
-        app:srcCompat="@drawable/darkrectangle" />
+        app:srcCompat="@drawable/darkbluebackground" />
 
     <TextView
         android:id="@+id/homeText"

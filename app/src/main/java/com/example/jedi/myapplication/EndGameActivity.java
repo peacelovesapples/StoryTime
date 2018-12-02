@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class EndGameActivity extends Activity {
+public class EndGameActivity extends AppCompatActivity {
 
     ImageView homeBack;
     TextView homeText;
@@ -81,10 +81,10 @@ public class EndGameActivity extends Activity {
     private void replay() {
         Intent intent = getIntent();
         String fileName = intent.getStringExtra("fileName");
-
-        intent = new Intent(EndGameActivity.this, GameChoiceActivity.class);
-        intent.putExtra("fileName", fileName);
-        startActivity(intent);
+        if (fileName.equals("dentist.txt")) {
+            intent = new Intent(EndGameActivity.this, MainDentalActivity.class);
+            startActivity(intent);
+        }
     }
 
     private void credits() {

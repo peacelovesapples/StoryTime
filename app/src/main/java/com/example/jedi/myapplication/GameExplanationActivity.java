@@ -20,6 +20,10 @@ public class GameExplanationActivity extends AppCompatActivity {
     ImageView actionBack;
     TextView actionText;
 
+    boolean isWatchMode; // if this is on, we only ever update this page.
+    boolean isDescription;
+    Story story;
+
     boolean isEndOfGame;
     boolean isCorrectChoice;
     String fileName;
@@ -35,11 +39,20 @@ public class GameExplanationActivity extends AppCompatActivity {
         actionBack = findViewById(R.id.actionBack);
         actionText = findViewById(R.id.actionText);
 
+        isWatchMode = getIntent().getBooleanExtra("isWatchMode", false);
         isEndOfGame = getIntent().getBooleanExtra("isEndOfGame", false);
         isCorrectChoice = getIntent().getBooleanExtra("isCorrectChoice", false);
         fileName = getIntent().getStringExtra("fileName");
-
-        descriptionText.setText(getIntent().getStringExtra("description"));
+        if (isWatchMode) {
+            story = new Story(this, fileName);
+            isDescription = true;
+            String description = story.getDescriptionText();
+            description = description.replace("What do you do?", "");
+            description = description.replace("What do you say?", "");
+            descriptionText.setText(description);
+        } else {
+            descriptionText.setText(getIntent().getStringExtra("description"));
+        }
 
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,14 +64,22 @@ public class GameExplanationActivity extends AppCompatActivity {
         actionBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                action();
+                if (isWatchMode) {
+                    actionForWatchMode();
+                } else {
+                    actionForNormalMode();
+                }
             }
         });
 
         actionText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                action();
+                if (isWatchMode) {
+                    actionForWatchMode();
+                } else {
+                    actionForNormalMode();
+                }
             }
         });
 
@@ -71,8 +92,34 @@ public class GameExplanationActivity extends AppCompatActivity {
 
         }
     }
+
     private void load_pic() {
 
+    }
+
+    private void actionForWatchMode() {
+        if (!isDescription) {
+            story.nextSequence();
+        }
+        if (story.isEnd() && !isDescription) {
+            Intent intent = new Intent(GameExplanationActivity.this, EndGameActivity.class );
+            intent.putExtra("fileName", fileName);
+            startActivity(intent);
+            return;
+        }
+
+        isDescription = !isDescription;
+
+        if (isDescription) {
+            String description = story.getDescriptionText();
+            description = description.replace("What do you do?", "");
+            description = description.replace("What do you say?", "");
+            descriptionText.setText(description);
+        } else {
+            String answer = story.getCorrectAnswer().explanation;
+            answer = answer.replace("Perfect! ", "");
+            descriptionText.setText(answer);
+        }
     }
 
     private void pause() {
@@ -80,7 +127,7 @@ public class GameExplanationActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void action() {
+    private void actionForNormalMode() {
         if (isEndOfGame && isCorrectChoice) {
             Intent intent = new Intent(GameExplanationActivity.this, EndGameActivity.class );
             intent.putExtra("fileName", fileName);

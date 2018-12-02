@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/darkrectangle" />
+        app:srcCompat="@drawable/greenbackground" />
 
     <ImageView
         android:id="@+id/helpBack"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resumeBack"
-        app:srcCompat="@drawable/darkrectangle" />
+        app:srcCompat="@drawable/darkbluebackground" />
 
     <ImageView
         android:id="@+id/quitBack"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helpBack"
-        app:srcCompat="@drawable/darkrectangle" />
+        app:srcCompat="@drawable/darkbluebackground" />
 
     <TextView
         android:id="@+id/resumeText"

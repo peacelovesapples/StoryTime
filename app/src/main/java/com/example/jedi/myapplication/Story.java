@@ -50,6 +50,15 @@ public class Story implements Serializable {
         Collections.shuffle(options);
     }
 
+    public StoryOption getCorrectAnswer() {
+        for (StoryOption option : options) {
+            if (option.isCorrectChoice) {
+                return option;
+            }
+        }
+        return null;
+    }
+
     public boolean isEnd() {
         if (!scanner.hasNextLine()) {
             boolean retVal = endOfGameFlag;

@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 public class MainDentalActivity extends Activity {
     ImageView goback;
     ImageView play;
+    ImageView watch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MainDentalActivity extends Activity {
         setContentView(R.layout.activity_main_dental);
         goback = (ImageView) findViewById(R.id.go_back_dental);
         play = findViewById(R.id.play);
+        watch = findViewById(R.id.watch);
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,11 +35,24 @@ public class MainDentalActivity extends Activity {
                 play();
             }
         });
+        watch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                watch();
+            }
+        });
     }
     public void go_back(View view) {super.finish();}
     public void play() {
         Intent intent = new Intent(MainDentalActivity.this, GameChoiceActivity.class );
         intent.putExtra("fileName", "dentist.txt");
+        startActivity(intent);
+    }
+
+    public void watch() {
+        Intent intent = new Intent(MainDentalActivity.this, GameExplanationActivity.class );
+        intent.putExtra("fileName", "dentist.txt");
+        intent.putExtra("isWatchMode", true);
         startActivity(intent);
     }
 }
