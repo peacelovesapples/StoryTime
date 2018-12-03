@@ -1,5 +1,5 @@
 Is that the school bell? Looks it's time for recess! Everyone rushes outside to play and you get get out the snack mom and dad packed for you. It's your favorite! But then you notice your friend is sad - her parents forgot to pack her a snack. What do you do?
-recess
+recess1
 Offer her some of your snack.
 Perfect! You should always share with your friends.
 Don't offer, but share with her if she asks.
@@ -8,7 +8,7 @@ Don't share, even if she asks.
 Not quite. You should always share with your friends. How would you feel if your parents forgot to pack you a snack, and your friend wouldn’t share? Try again.
 
 Candice: "Thank you so much _name_! I feel so much better now. Say, do you wanna play a game? It looks like Kevin isn't using his ball. We should borrow it." What do you do?
-recess
+recess2
 Ask Kevin, "Can we borrow your ball?"
 Perfect! You should always ask before taking something that isn't yours.
 Tell Kevin, "Give me your ball."
@@ -17,7 +17,7 @@ Take Kevin's ball.
 Not quite. You should always ask before taking something that isn't yours. Imagine your friend tried to take your toy without asking. How would you feel? Try again.
 
 Kevin lets you borrow his ball and you and Candice play with it. Later you get bored. What do you do?
-recess
+recess3
 Give Kevin his ball back, and tell him "thank you" for letting you borrow it.
 Perfect! When you borrow something, you should always give it back. Also, you should say "thank you" when someone does something nice, like letting you borrow a toy.
 Give Kevin his ball back and don't say anything.

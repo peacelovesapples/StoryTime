@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class MainArtClassActivity extends Activity {
+public class MainArtClassActivity extends AppCompatActivity {
     ImageView goback;
     ImageView play;
     ImageView watch;
@@ -19,8 +19,8 @@ public class MainArtClassActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_dental);
-        goback = (ImageView) findViewById(R.id.go_back_dental);
+        setContentView(R.layout.activity_main_art_class);
+        goback = (ImageView) findViewById(R.id.goBack);
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
 

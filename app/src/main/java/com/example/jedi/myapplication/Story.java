@@ -41,7 +41,9 @@ public class Story implements Serializable {
             return;
         }
         description = scanner.nextLine();
-        description = description.replace("_name_", userName);
+        if (description.contains("_name_")) {
+            description = description.replace("_name_", userName);
+        }
         descriptionImageName = scanner.nextLine();
         options = new ArrayList<StoryOption>(3);
         options.add(new StoryOption(true, scanner.nextLine(), scanner.nextLine()));

@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class MainLunchtimeActivity extends Activity {
+public class MainLunchtimeActivity extends AppCompatActivity {
     ImageView goback;
     ImageView play;
     ImageView watch;
@@ -19,8 +19,8 @@ public class MainLunchtimeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_dental);
-        goback = (ImageView) findViewById(R.id.go_back_dental);
+        setContentView(R.layout.activity_main_lunchtime);
+        goback = (ImageView) findViewById(R.id.goBack);
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
 
@@ -46,6 +46,7 @@ public class MainLunchtimeActivity extends Activity {
             }
         });
     }
+
     public void go_back(View view) {super.finish();}
     public void play() {
         Intent intent = new Intent(MainLunchtimeActivity.this, GameChoiceActivity.class );

@@ -19,8 +19,8 @@ public class MainRecessActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_dental);
-        goback = (ImageView) findViewById(R.id.go_back_dental);
+        setContentView(R.layout.activity_main_recess);
+        goback = (ImageView) findViewById(R.id.goBack);
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
 
