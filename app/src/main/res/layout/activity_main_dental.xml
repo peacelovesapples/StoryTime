@@ -34,7 +34,7 @@
         <ImageView
             android:layout_width="334dp"
             android:layout_height="148dp"
-            android:src="@drawable/dentistimage" />
+            android:src="@drawable/smallgirltooth" />
 
         <ImageView
             android:layout_width="114dp"

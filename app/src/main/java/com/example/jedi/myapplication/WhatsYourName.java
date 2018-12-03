@@ -1,5 +1,6 @@
 package com.example.jedi.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-public class WhatsYourName extends AppCompatActivity {
+public class WhatsYourName extends Activity {
     ImageView goback;
     ImageView submit;
     EditText name_input;
