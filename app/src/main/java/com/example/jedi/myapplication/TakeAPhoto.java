@@ -31,6 +31,7 @@ public class TakeAPhoto extends Activity {
     ImageView cam;
     ImageView gallery;
     ImageView next;
+    ImageView goBack;
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final int PICK_IMAGE = 2;
     ImageView mImageView;
@@ -45,9 +46,16 @@ public class TakeAPhoto extends Activity {
         setContentView(R.layout.activity_take_aphoto);
         next = (ImageView) findViewById(R.id.skip);
         mImageView = (ImageView) findViewById(R.id.taken_pic);
+        goBack = (ImageView) findViewById(R.id.goBack);
 
         cam = findViewById(R.id.cameraBack);
         gallery = findViewById(R.id.gallery);
+        goBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                go_back(v);
+            }
+        });
 
         cam.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +74,7 @@ public class TakeAPhoto extends Activity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(TakeAPhoto.this, ChooseActivity.class);
+                Intent intent1 = new Intent(TakeAPhoto.this, WhatsYourName.class);
                 startActivity(intent1);
             }
         });
@@ -74,7 +82,7 @@ public class TakeAPhoto extends Activity {
 
     }
 
-
+    public void go_back(View view) {super.finish();}
 
 
     private void dispatchTakePictureIntent() {

@@ -26,24 +26,20 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity
-            android:name=".MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ChooseActivity" />
-        <activity
-            android:name=".MainDentalActivity" />
+        <activity android:name=".ChooseActivity" />
+        <activity android:name=".MainDentalActivity" />
         <activity android:name=".PauseActivity" />
         <activity android:name=".GameChoiceActivity" />
         <activity android:name=".EndGameActivity" />
         <activity android:name=".GameExplanationActivity" />
-        <activity
-            android:name=".TakeAPhoto">
+        <activity android:name=".TakeAPhoto">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,7 +48,8 @@
         </activity>
         <activity android:name=".MainArtClassActivity" />
         <activity android:name=".MainRecessActivity" />
-        <activity android:name=".MainLunchtimeActivity"></activity>
+        <activity android:name=".MainLunchtimeActivity" />
+        <activity android:name=".WhatsYourName"></activity>
     </application>
 
 </manifest>
