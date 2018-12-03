@@ -27,8 +27,7 @@
         </provider>
 
         <activity
-            android:name=".MainActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,24 +35,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ChooseActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+            android:name=".ChooseActivity" />
         <activity
-            android:name=".MainDentalActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+            android:name=".MainDentalActivity" />
         <activity android:name=".PauseActivity" />
         <activity android:name=".GameChoiceActivity" />
         <activity android:name=".EndGameActivity" />
         <activity android:name=".GameExplanationActivity" />
         <activity
-            android:name=".TakeAPhoto"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            android:name=".TakeAPhoto">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-    </activity>
+        </activity>
+        <activity android:name=".MainArtClassActivity" />
+        <activity android:name=".MainRecessActivity" />
+        <activity android:name=".MainLunchtimeActivity"></activity>
     </application>
 
 </manifest>

@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".MainDentalActivity">
+    tools:context=".MainRecessActivity">
+
     <ImageView
-        android:id="@+id/go_back_dental"
+        android:id="@+id/goBack"
         android:layout_width="32dp"
         android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/leftarrow"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="30dp" />
+        android:src="@drawable/leftarrow" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,13 +35,13 @@
         <ImageView
             android:layout_width="334dp"
             android:layout_height="148dp"
-            android:src="@drawable/dentistimage" />
+            android:src="@drawable/recessimage" />
 
         <ImageView
             android:layout_width="114dp"
             android:layout_height="33dp"
             android:layout_marginTop="15dp"
-            android:src="@drawable/dentist" />
+            android:src="@drawable/recess" />
 
         <ImageView
             android:id="@+id/play"
@@ -57,9 +58,4 @@
             android:src="@drawable/watch" />
 
     </LinearLayout>
-
-
-
-
-
 </RelativeLayout>

@@ -39,6 +39,7 @@
         android:layout_centerVertical="true"
         android:gravity="center">
         <LinearLayout
+            android:id="@+id/recess_choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -46,7 +47,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/recess"
+                android:src="@drawable/recessimage"
                 />
             <ImageView
                 android:layout_width="76dp"
@@ -63,7 +64,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/smallgirltooth"
+                android:src="@drawable/dentistimage"
                 />
             <ImageView
                 android:layout_width="94dp"
@@ -81,6 +82,7 @@
             android:layout_centerVertical="true"
             android:gravity="center">
             <LinearLayout
+                android:id="@+id/artclass_choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -97,6 +99,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/lunchtime_choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -104,12 +107,12 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/fieldbus"
+                    android:src="@drawable/lunchtimeimage"
                     />
                 <ImageView
                     android:layout_width="114dp"
                     android:layout_height="33dp"
-                    android:src="@drawable/fieldtriptext"/>
+                    android:src="@drawable/lunchtime"/>
 
             </LinearLayout>
 

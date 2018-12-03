@@ -12,6 +12,10 @@ import android.widget.LinearLayout;
 public class ChooseActivity extends Activity {
     ImageView goback;
     LinearLayout dental_choice;
+    LinearLayout artclass_choice;
+    LinearLayout recess_choice;
+    LinearLayout lunchtime_choice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +30,38 @@ public class ChooseActivity extends Activity {
             }
         });
         dental_choice = (LinearLayout) findViewById(R.id.dental_choice);
+        artclass_choice = findViewById(R.id.artclass_choice);
+        recess_choice = findViewById(R.id.recess_choice);
+        lunchtime_choice = findViewById(R.id.lunchtime_choice);
 
         dental_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, MainDentalActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        artclass_choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseActivity.this, MainArtClassActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        recess_choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseActivity.this, MainRecessActivity.class );
+                startActivity(intent);
+            }
+        });
+
+        lunchtime_choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChooseActivity.this, MainLunchtimeActivity.class );
                 startActivity(intent);
             }
         });
