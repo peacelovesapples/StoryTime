@@ -17,6 +17,7 @@ public class Story implements Serializable {
     Scanner scanner;
     public String fileName;
     private String userName;
+    public String descriptionImageName;
 
     String description;
     ArrayList<StoryOption> options;
@@ -41,6 +42,7 @@ public class Story implements Serializable {
         }
         description = scanner.nextLine();
         description = description.replace("_name_", userName);
+        descriptionImageName = scanner.nextLine();
         options = new ArrayList<StoryOption>(3);
         options.add(new StoryOption(true, scanner.nextLine(), scanner.nextLine()));
         options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine()));

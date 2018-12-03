@@ -116,7 +116,8 @@ public class GameChoiceActivity extends AppCompatActivity {
         optionThree = story.getOptionThree();
         optionThreeText.setText(optionThree.text);
         descriptionText.setText(story.getDescriptionText());
-        // TODO: should also update image
+        int drawableResourceId = this.getResources().getIdentifier(story.descriptionImageName, "drawable", this.getPackageName());
+        descriptionImage.setImageResource(drawableResourceId);
     }
 
     private void playAudio() {
