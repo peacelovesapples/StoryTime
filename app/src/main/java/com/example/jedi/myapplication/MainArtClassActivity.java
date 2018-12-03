@@ -14,6 +14,8 @@ public class MainArtClassActivity extends Activity {
     ImageView play;
     ImageView watch;
 
+    private String userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,8 @@ public class MainArtClassActivity extends Activity {
         goback = (ImageView) findViewById(R.id.go_back_dental);
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
+
+        userName = getIntent().getStringExtra("none");
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +50,7 @@ public class MainArtClassActivity extends Activity {
     public void play() {
         Intent intent = new Intent(MainArtClassActivity.this, GameChoiceActivity.class );
         intent.putExtra("fileName", "artclass.txt");
+        intent.putExtra("none", userName);
         startActivity(intent);
     }
 
@@ -53,6 +58,7 @@ public class MainArtClassActivity extends Activity {
         Intent intent = new Intent(MainArtClassActivity.this, GameExplanationActivity.class );
         intent.putExtra("fileName", "artclass.txt");
         intent.putExtra("isWatchMode", true);
+        intent.putExtra("none", userName);
         startActivity(intent);
     }
 }

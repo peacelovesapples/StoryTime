@@ -16,13 +16,15 @@ public class Story implements Serializable {
 
     Scanner scanner;
     public String fileName;
+    private String userName;
 
     String description;
     ArrayList<StoryOption> options;
     boolean endOfGameFlag = false;
 
-    public Story(Context context, String fileName) {
+    public Story(Context context, String fileName, String userName) {
         this.fileName = fileName;
+        this.userName = userName;
 
         try {
             DataInputStream textFileStream = new DataInputStream(context.getAssets().open(fileName));
@@ -38,6 +40,7 @@ public class Story implements Serializable {
             return;
         }
         description = scanner.nextLine();
+        description = description.replace("_name_", userName);
         options = new ArrayList<StoryOption>(3);
         options.add(new StoryOption(true, scanner.nextLine(), scanner.nextLine()));
         options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine()));

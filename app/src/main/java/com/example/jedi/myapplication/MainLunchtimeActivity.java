@@ -14,6 +14,8 @@ public class MainLunchtimeActivity extends Activity {
     ImageView play;
     ImageView watch;
 
+    private String userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,8 @@ public class MainLunchtimeActivity extends Activity {
         goback = (ImageView) findViewById(R.id.go_back_dental);
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
+
+        userName = getIntent().getStringExtra("none");
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,12 +50,14 @@ public class MainLunchtimeActivity extends Activity {
     public void play() {
         Intent intent = new Intent(MainLunchtimeActivity.this, GameChoiceActivity.class );
         intent.putExtra("fileName", "lunchtime.txt");
+        intent.putExtra("none", userName);
         startActivity(intent);
     }
 
     public void watch() {
         Intent intent = new Intent(MainLunchtimeActivity.this, GameExplanationActivity.class );
         intent.putExtra("fileName", "lunchtime.txt");
+        intent.putExtra("none", userName);
         intent.putExtra("isWatchMode", true);
         startActivity(intent);
     }

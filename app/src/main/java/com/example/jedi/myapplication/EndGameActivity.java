@@ -84,6 +84,15 @@ public class EndGameActivity extends AppCompatActivity {
         if (fileName.equals("dentist.txt")) {
             intent = new Intent(EndGameActivity.this, MainDentalActivity.class);
             startActivity(intent);
+        } else if (fileName.equals("artclass.txt")) {
+            intent = new Intent(EndGameActivity.this, MainArtClassActivity.class);
+            startActivity(intent);
+        } else if (fileName.equals("lunchtime.txt")) {
+            intent = new Intent(EndGameActivity.this, MainLunchtimeActivity.class);
+            startActivity(intent);
+        } else if (fileName.equals("recess.txt")) {
+            intent = new Intent(EndGameActivity.this, MainRecessActivity.class);
+            startActivity(intent);
         }
     }
 

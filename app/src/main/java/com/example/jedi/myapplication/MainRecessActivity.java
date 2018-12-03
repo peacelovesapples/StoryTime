@@ -14,6 +14,8 @@ public class MainRecessActivity extends Activity {
     ImageView play;
     ImageView watch;
 
+    private String userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,8 @@ public class MainRecessActivity extends Activity {
         goback = (ImageView) findViewById(R.id.go_back_dental);
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
+
+        userName = getIntent().getStringExtra(userName);
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +50,7 @@ public class MainRecessActivity extends Activity {
     public void play() {
         Intent intent = new Intent(MainRecessActivity.this, GameChoiceActivity.class );
         intent.putExtra("fileName", "recess.txt");
+        intent.putExtra("none", userName);
         startActivity(intent);
     }
 
@@ -53,6 +58,7 @@ public class MainRecessActivity extends Activity {
         Intent intent = new Intent(MainRecessActivity.this, GameExplanationActivity.class );
         intent.putExtra("fileName", "recess.txt");
         intent.putExtra("isWatchMode", true);
+        intent.putExtra("none", userName);
         startActivity(intent);
     }
 }

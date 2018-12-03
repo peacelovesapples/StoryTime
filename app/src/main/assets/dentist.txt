@@ -1,4 +1,4 @@
-It's time to go to the dentist! Dad wakes you up nice and early because he doesn't want you to be late. You get there right on time. Dad signs you in. Kevin the receptionist says: "Good morning "name"". What do you do?
+It's time to go to the dentist! Dad wakes you up nice and early because he doesn't want you to be late. You get there right on time. Dad signs you in. Kevin the receptionist says: "Good morning _name_". What do you do?
 Say "Good morning."
 Perfect! When someone greets you, it's good to greet them back.
 Smile at him.
@@ -14,7 +14,7 @@ Good guess! You should always ask before taking something that isn't yours. Ther
 Take dad's phone.
 Not quite. You should always ask before taking something that isn't yours. Imagine your friend tried to take your toy without asking. How would you feel? Try again.
 
-Dad gives you his phone and you play your favorite game until the dentist comes to get you. You're still playing when they come. The dentist says, "Good morning "name"". What do you do?
+Dad gives you his phone and you play your favorite game until the dentist comes to get you. You're still playing when they come. The dentist says, "Good morning _name_". What do you do?
 Put the game away and say "Good morning."
 Perfect! When someone greets you, you should greet them back, and when someone wants to talk to you, you should pay attention to them.
 Keep playing the game and say "Good morning."

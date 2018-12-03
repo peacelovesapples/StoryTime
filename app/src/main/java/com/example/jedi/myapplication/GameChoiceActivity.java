@@ -27,6 +27,7 @@ public class GameChoiceActivity extends AppCompatActivity {
     private StoryOption optionOne;
     private StoryOption optionTwo;
     private StoryOption optionThree;
+    private String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,8 @@ public class GameChoiceActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String fileName = intent.getStringExtra("fileName");
-        story = new Story(this, fileName);
+        userName = intent.getStringExtra("none");
+        story = new Story(this, fileName, userName);
         updateViews();
 
         pauseButton.setOnClickListener(new View.OnClickListener() {

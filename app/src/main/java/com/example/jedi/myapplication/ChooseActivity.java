@@ -16,6 +16,8 @@ public class ChooseActivity extends Activity {
     LinearLayout recess_choice;
     LinearLayout lunchtime_choice;
 
+    private String userName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +36,13 @@ public class ChooseActivity extends Activity {
         recess_choice = findViewById(R.id.recess_choice);
         lunchtime_choice = findViewById(R.id.lunchtime_choice);
 
+        userName = getIntent().getStringExtra("none");
+
         dental_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, MainDentalActivity.class );
+                intent.putExtra("none", userName);
                 startActivity(intent);
             }
         });
@@ -46,6 +51,7 @@ public class ChooseActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, MainArtClassActivity.class );
+                intent.putExtra("none", userName);
                 startActivity(intent);
             }
         });
@@ -54,6 +60,7 @@ public class ChooseActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, MainRecessActivity.class );
+                intent.putExtra("none", userName);
                 startActivity(intent);
             }
         });
@@ -62,6 +69,7 @@ public class ChooseActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChooseActivity.this, MainLunchtimeActivity.class );
+                intent.putExtra("none", userName);
                 startActivity(intent);
             }
         });

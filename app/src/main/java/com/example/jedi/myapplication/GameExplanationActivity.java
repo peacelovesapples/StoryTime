@@ -30,6 +30,7 @@ public class GameExplanationActivity extends AppCompatActivity {
     boolean isEndOfGame;
     boolean isCorrectChoice;
     String fileName;
+    String userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +48,9 @@ public class GameExplanationActivity extends AppCompatActivity {
         isEndOfGame = getIntent().getBooleanExtra("isEndOfGame", false);
         isCorrectChoice = getIntent().getBooleanExtra("isCorrectChoice", false);
         fileName = getIntent().getStringExtra("fileName");
+        userName = getIntent().getStringExtra("none");
         if (isWatchMode) {
-            story = new Story(this, fileName);
+            story = new Story(this, fileName, userName);
             isDescription = true;
             String description = story.getDescriptionText();
             description = description.replace("What do you do?", "");
