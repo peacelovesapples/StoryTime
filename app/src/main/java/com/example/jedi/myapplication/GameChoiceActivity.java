@@ -1,11 +1,13 @@
 package com.example.jedi.myapplication;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.os.Handler;
 
 public class GameChoiceActivity extends AppCompatActivity {
 
@@ -18,6 +20,7 @@ public class GameChoiceActivity extends AppCompatActivity {
     ImageView optionTwoBack;
     TextView optionThreeText;
     ImageView optionThreeBack;
+    ImageView playSoundButton;
 
     public Story story;
 
@@ -39,6 +42,7 @@ public class GameChoiceActivity extends AppCompatActivity {
         optionTwoBack = findViewById(R.id.optionTwoBack);
         optionThreeText = findViewById(R.id.optionThreeText);
         optionThreeBack = findViewById(R.id.optionThreeBack);
+        playSoundButton = findViewById(R.id.playSoundButton);
 
         Intent intent = getIntent();
         String fileName = intent.getStringExtra("fileName");
@@ -93,6 +97,13 @@ public class GameChoiceActivity extends AppCompatActivity {
                 selectedOption(optionThree);
             }
         });
+
+        playSoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playAudio();
+            }
+        });
     }
 
     public void updateViews() {
@@ -104,6 +115,22 @@ public class GameChoiceActivity extends AppCompatActivity {
         optionThreeText.setText(optionThree.text);
         descriptionText.setText(story.getDescriptionText());
         // TODO: should also update image
+    }
+
+    private void playAudio() {
+        MediaPlayer mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.test);
+        int duration = mp.getDuration();
+        playSoundButton.setVisibility(View.GONE);
+        mp.start();
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                playSoundButton.setVisibility(View.VISIBLE);
+            }
+        }, duration);
+
     }
 
     private void pause() {

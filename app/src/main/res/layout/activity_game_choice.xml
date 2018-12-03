@@ -153,6 +153,16 @@
         app:layout_constraintEnd_toEndOf="@+id/optionThreeBack"
         app:layout_constraintStart_toStartOf="@+id/optionThreeBack"
         app:layout_constraintTop_toTopOf="@+id/optionThreeBack" />
+
+    <ImageView
+        android:id="@+id/playSoundButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionImage"
+        app:layout_constraintStart_toEndOf="@+id/descriptionImage"
+        app:srcCompat="@drawable/pause" />
 </android.support.constraint.ConstraintLayout>
 
 

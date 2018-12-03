@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,7 @@ public class GameExplanationActivity extends AppCompatActivity {
     TextView descriptionText;
     ImageView actionBack;
     TextView actionText;
+    ImageView playAudioButton;
 
     boolean isWatchMode; // if this is on, we only ever update this page.
     boolean isDescription;
@@ -38,6 +41,7 @@ public class GameExplanationActivity extends AppCompatActivity {
         descriptionImage = findViewById(R.id.descriptionImage);
         actionBack = findViewById(R.id.actionBack);
         actionText = findViewById(R.id.actionText);
+        playAudioButton = findViewById(R.id.playAudio);
 
         isWatchMode = getIntent().getBooleanExtra("isWatchMode", false);
         isEndOfGame = getIntent().getBooleanExtra("isEndOfGame", false);
@@ -83,6 +87,13 @@ public class GameExplanationActivity extends AppCompatActivity {
             }
         });
 
+        playAudioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playAudio();
+            }
+        });
+
        // kid.setIm
         File sdCardDirectory = Environment.getExternalStorageDirectory();
         File new_image = new File(sdCardDirectory, "selected.png");
@@ -91,6 +102,21 @@ public class GameExplanationActivity extends AppCompatActivity {
             kid.setImageBitmap(BitmapFactory.decodeFile(new_image.getAbsolutePath()));
 
         }
+    }
+
+    private void playAudio() {
+        MediaPlayer mp = MediaPlayer.create(GameExplanationActivity.this, R.raw.test);
+        int duration = mp.getDuration();
+        playAudioButton.setVisibility(View.GONE);
+        mp.start();
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                playAudioButton.setVisibility(View.VISIBLE);
+            }
+        }, duration);
     }
 
     private void load_pic() {
