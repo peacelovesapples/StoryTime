@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="85dp"
         android:gravity="center">
 
         <ImageView
@@ -82,7 +82,7 @@
         android:layout_height="196dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="173dp"
+        android:layout_marginTop="112dp"
         app:srcCompat="@drawable/playtransparent" />
 
 </RelativeLayout>
