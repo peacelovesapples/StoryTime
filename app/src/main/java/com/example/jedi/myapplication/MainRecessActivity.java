@@ -24,7 +24,7 @@ public class MainRecessActivity extends Activity {
         play = findViewById(R.id.play);
         watch = findViewById(R.id.watch);
 
-        userName = getIntent().getStringExtra(userName);
+        userName = getIntent().getStringExtra("none");
 
         goback.setOnClickListener(new View.OnClickListener() {
             @Override

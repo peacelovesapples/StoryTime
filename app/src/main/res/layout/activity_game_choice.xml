@@ -7,6 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".GameChoiceActivity">
 
+
+
     <ImageView
         android:id="@+id/pause"
         android:layout_width="40dp"
@@ -50,7 +52,6 @@
 
 
     </LinearLayout>
-
         <RelativeLayout
             android:layout_width="296dp"
             android:layout_height="61dp"
@@ -120,12 +121,15 @@
         </RelativeLayout>
 
 </LinearLayout>
-
     <ImageView
         android:id="@+id/playSoundButton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="158dp"
+        android:layout_height="138dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="196dp"
         app:srcCompat="@drawable/playtransparent" />
+
 </RelativeLayout>
 
 

@@ -44,7 +44,7 @@ public class Story implements Serializable {
 
         descriptionImageName = scanner.nextLine();
         description = scanner.nextLine();
-        if (description.contains("_name_")) {
+        if (description.contains("_name_") && userName != null) {
             description = description.replace("_name_", userName);
         }
         audioName = scanner.nextLine();
