@@ -1,5 +1,6 @@
 package com.example.jedi.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -38,8 +39,8 @@ public class GameChoiceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_choice);
 
-        des_image = (ImageView) findViewById(R.id.descriptionImage);
-        Picasso.get().load(R.drawable.receptionistwaving).into(des_image);
+//        des_image = (ImageView) findViewById(R.id.descriptionImage);
+ //       Picasso.get().load(R.drawable.receptionistwaving).into(des_image);
 
         pauseButton = findViewById(R.id.pause);
         descriptionText = findViewById(R.id.descriptionText);
@@ -124,7 +125,8 @@ public class GameChoiceActivity extends AppCompatActivity {
         optionThreeText.setText(optionThree.text);
         descriptionText.setText(story.getDescriptionText());
         int drawableResourceId = this.getResources().getIdentifier(story.descriptionImageName, "drawable", this.getPackageName());
-        descriptionImage.setImageResource(drawableResourceId);
+        Picasso.get().load(drawableResourceId).into(descriptionImage);
+        //descriptionImage.setImageResource(drawableResourceId);
     }
 
     private void playAudio() {
