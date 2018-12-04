@@ -1,26 +1,38 @@
-It's time to go to the dentist! Dad wakes you up nice and early because he doesn't want you to be late. You get there right on time. Dad signs you in. Kevin the receptionist says: "Good morning _name_". What do you do?
 receptionistwaving
+It's time to go to the dentist! Dad wakes you up nice and early because he doesn't want you to be late. You get there right on time. Dad signs you in. Kevin the receptionist says: "Good morning _name_". What do you do?
+dentist1
 Say "Good morning."
 Perfect! When someone greets you, it's good to greet them back.
+dentist2
 Smile at him.
 Good guess! When someone greets you, it's good to let them know you're happy to see them. There's a better way to do that, though. Try again.
+dentist3
 Do nothing
 Not quite. When someone greets you, you should do something to let them know you're happy to see them. Imagine you said hi to your friend and they ignored you. How would you feel? Try again.
+dentist4
 
-Dad signs you in and you sit down to wait. The dentist is running late and you're bored, and you wanna play a game on dad's phone. What do you do?
 dentist2
+Dad signs you in and you sit down to wait. The dentist is running late and you're bored, and you wanna play a game on dad's phone. What do you do?
+dentist5
 Say "Dad, can I play a game on your phone?"
 Perfect! You should always ask before taking something that isn't yours.
+dentist6
 Say "Dad, give me your phone."
 Good guess! You should always ask before taking something that isn't yours. There's a better way to ask, though. Try again.
+dentist7
 Take dad's phone.
 Not quite. You should always ask before taking something that isn't yours. Imagine your friend tried to take your toy without asking. How would you feel? Try again.
+dentist8
 
-Dad gives you his phone and you play your favorite game until the dentist comes to get you. You're still playing when they come. The dentist says, "Good morning _name_". What do you do?
 dentist3
+Dad gives you his phone and you play your favorite game until the dentist comes to get you. You're still playing when they come. The dentist says, "Good morning _name_". What do you do?
+dentist9
 Put the game away and say "Good morning."
 Perfect! When someone greets you, you should greet them back, and when someone wants to talk to you, you should pay attention to them.
+dentist10
 Keep playing the game and say "Good morning."
 Good guess! When someone greets you, you should greet them back. But when someone wants to talk to you, you should pay attention to them. Imagine your friend was playing a game and you tried to talk to them, but they kept playing. How would you feel? Try again.
+dentist11
 Keep playing the game and don't say anything.
 Not quite. When someone greets you, you should greet them back. Also, when someone wants to talk to you, you should pay attention to them. Imagine your friend was playing a game and you tried to talk to them, but they kept playing. How would you feel? Try again.
+dentist12

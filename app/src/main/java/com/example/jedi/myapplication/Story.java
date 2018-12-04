@@ -18,6 +18,7 @@ public class Story implements Serializable {
     public String fileName;
     private String userName;
     public String descriptionImageName;
+    public String audioName;
 
     String description;
     ArrayList<StoryOption> options;
@@ -40,15 +41,17 @@ public class Story implements Serializable {
         if (isEnd()) {
             return;
         }
+
+        descriptionImageName = scanner.nextLine();
         description = scanner.nextLine();
         if (description.contains("_name_")) {
             description = description.replace("_name_", userName);
         }
-        descriptionImageName = scanner.nextLine();
+        audioName = scanner.nextLine();
         options = new ArrayList<StoryOption>(3);
-        options.add(new StoryOption(true, scanner.nextLine(), scanner.nextLine()));
-        options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine()));
-        options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine()));
+        options.add(new StoryOption(true, scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
+        options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
+        options.add(new StoryOption(false, scanner.nextLine(), scanner.nextLine(), scanner.nextLine()));
 
         if (scanner.hasNextLine()) {
             scanner.nextLine();
