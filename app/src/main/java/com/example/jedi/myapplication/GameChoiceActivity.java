@@ -125,7 +125,7 @@ public class GameChoiceActivity extends AppCompatActivity {
         optionThreeText.setText(optionThree.text);
         descriptionText.setText(story.getDescriptionText());
         int drawableResourceId = this.getResources().getIdentifier(story.descriptionImageName, "drawable", this.getPackageName());
-        Picasso.get().load(drawableResourceId).into(descriptionImage);
+        Picasso.get().load(drawableResourceId).resize(500, 500).into(descriptionImage);
         //descriptionImage.setImageResource(drawableResourceId);
     }
 

@@ -110,7 +110,8 @@ public class GameExplanationActivity extends AppCompatActivity {
         File new_image = new File(sdCardDirectory, "selected.png");
         if (new_image.exists()) {
             ImageView kid = findViewById(R.id.imageView4);
-            kid.setImageBitmap(BitmapFactory.decodeFile(new_image.getAbsolutePath()));
+            Picasso.get().load(new_image).resize(500, 500).into(kid);
+            //kid.setImageBitmap(BitmapFactory.decodeFile(new_image.getAbsolutePath()));
 
         }
     }

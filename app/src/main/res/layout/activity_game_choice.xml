@@ -52,20 +52,20 @@
     </LinearLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="296dp"
+            android:layout_height="61dp"
             android:layout_marginTop="10dp"
             android:gravity="center">
             <ImageView
                 android:id="@+id/optionOneBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="296dp"
+                android:layout_height="61dp"
                 android:layout_centerInParent="true"
                 app:srcCompat="@drawable/lightbluebackground" />
             <TextView
                 android:id="@+id/optionOneText"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:text="Wave back"
@@ -74,8 +74,8 @@
                 android:textStyle="bold"/>
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="296dp"
+            android:layout_height="61dp"
             android:layout_marginTop="10dp"
             android:gravity="center">
             <ImageView
@@ -87,7 +87,7 @@
             <TextView
                 android:id="@+id/optionTwoText"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_centerInParent="true"
                 android:text="Walk away"
@@ -97,8 +97,8 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="296dp"
+            android:layout_height="61dp"
             android:layout_marginTop="10dp"
             android:gravity="center">
         <ImageView
@@ -110,7 +110,7 @@
         <TextView
             android:id="@+id/optionThreeText"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:gravity="center"
             android:layout_centerInParent="true"
             android:text="TextView"
