@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.io.File;
 
 public class GameExplanationActivity extends AppCompatActivity {
@@ -31,11 +33,15 @@ public class GameExplanationActivity extends AppCompatActivity {
     boolean isCorrectChoice;
     String fileName;
     String userName;
+    ImageView explain_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_explanation);
+        explain_image = (ImageView) findViewById(R.id.imageView4);
+        Picasso.get().load(R.drawable.explaining).into(explain_image);
+
 
         pauseButton = findViewById(R.id.pause);
         descriptionText = findViewById(R.id.descriptionText);

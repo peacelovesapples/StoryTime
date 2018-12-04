@@ -149,7 +149,7 @@ public class TakeAPhoto extends Activity {
         FileOutputStream outStream;
         try {
             outStream = new FileOutputStream(new_image);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 20, outStream);
 
 
             outStream.flush();

@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.os.Handler;
 
+import com.squareup.picasso.Picasso;
+
 public class GameChoiceActivity extends AppCompatActivity {
 
     ImageView pauseButton;
@@ -21,6 +23,7 @@ public class GameChoiceActivity extends AppCompatActivity {
     TextView optionThreeText;
     ImageView optionThreeBack;
     ImageView playSoundButton;
+    ImageView des_image;
 
     public Story story;
 
@@ -33,6 +36,9 @@ public class GameChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_choice);
+
+        des_image = (ImageView) findViewById(R.id.descriptionImage);
+        Picasso.get().load(R.drawable.receptionistwaving).into(des_image);
 
         pauseButton = findViewById(R.id.pause);
         descriptionText = findViewById(R.id.descriptionText);
