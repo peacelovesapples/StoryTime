@@ -1,4 +1,4 @@
-artclass1
+art1
 During art class, you look up and see that Nicholas keeps painting on Kevin's art. What do you do?
 artclass1
 Tell Nicholas to stop. If he doesn't, call the teacher.
@@ -11,7 +11,7 @@ Do nothing.
 Not quite. When you see something that isn't right, you should do something about it. Nicholas is being mean to Kevin, which isn't right. Try again.
 artclass4
 
-artclass2
+art2
 Candice accidentally spills paint on your artwork and starts apologizing. What do you say?
 artclass5
 "It's okay, it was an accident."
@@ -24,7 +24,7 @@ artclass7
 Not quite. It was an accident and Candice said sorry. You should accept her apology. Try again.
 artclass8
 
-artclass3
+art3
 At the end of class, Candice presents her artwork and says it is a bunny. However, it doesn't really look like a bunny. What do you say?
 artclass9
 Say something you like about the painting.
