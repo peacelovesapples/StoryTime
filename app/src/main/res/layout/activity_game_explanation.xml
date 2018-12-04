@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="75dp"
         android:gravity="center">
 
         <ImageView
@@ -78,11 +78,11 @@
 
     <ImageView
         android:id="@+id/playAudio"
-        android:layout_width="158dp"
-        android:layout_height="138dp"
+        android:layout_width="209dp"
+        android:layout_height="196dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="173dp"
         app:srcCompat="@drawable/playtransparent" />
 
 </RelativeLayout>
