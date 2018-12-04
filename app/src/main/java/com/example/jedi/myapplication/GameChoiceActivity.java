@@ -26,6 +26,7 @@ public class GameChoiceActivity extends AppCompatActivity {
     ImageView des_image;
 
     public Story story;
+    MediaPlayer mp;
 
     private StoryOption optionOne;
     private StoryOption optionTwo;
@@ -127,7 +128,105 @@ public class GameChoiceActivity extends AppCompatActivity {
     }
 
     private void playAudio() {
-        MediaPlayer mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.test);
+        if (story.audioName.equals("dentist1")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist1);
+        } else if (story.audioName.equals("dentist2")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist2);
+        } else if (story.audioName.equals("dentist3")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist3);
+        } else if (story.audioName.equals("dentist4")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist4);
+        } else if (story.audioName.equals("dentist5")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist5);
+        } else if (story.audioName.equals("dentist6")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist6);
+        } else if (story.audioName.equals("dentist7")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist7);
+        } else if (story.audioName.equals("dentist8")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist8);
+        } else if (story.audioName.equals("dentist9")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist9);
+        } else if (story.audioName.equals("dentist10")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist10);
+        } else if (story.audioName.equals("dentist11")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist11);
+        } else if (story.audioName.equals("dentist12")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.dentist12);
+        } else if (story.audioName.equals("artclass1")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass1);
+        } else if (story.audioName.equals("artclass2")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass2);
+        } else if (story.audioName.equals("artclass3")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass3);
+        } else if (story.audioName.equals("artclass4")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass4);
+        } else if (story.audioName.equals("artclass5")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass5);
+        } else if (story.audioName.equals("artclass6")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass6);
+        } else if (story.audioName.equals("artclass7")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass7);
+        } else if (story.audioName.equals("artclass8")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass8);
+        } else if (story.audioName.equals("artclass9")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass9);
+        } else if (story.audioName.equals("artclass10")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass10);
+        } else if (story.audioName.equals("artclass11")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass11);
+        } else if (story.audioName.equals("artclass12")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.artclass12);
+        } else if (story.audioName.equals("lunchtime1")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime1);
+        } else if (story.audioName.equals("lunchtime2")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime2);
+        } else if (story.audioName.equals("lunchtime3")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime3);
+        } else if (story.audioName.equals("lunchtime4")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime4);
+        } else if (story.audioName.equals("lunchtime5")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime5);
+        } else if (story.audioName.equals("lunchtime6")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime6);
+        } else if (story.audioName.equals("lunchtime7")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime7);
+        } else if (story.audioName.equals("lunchtime8")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime8);
+        } else if (story.audioName.equals("lunchtime9")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime9);
+        } else if (story.audioName.equals("lunchtime10")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime10);
+        } else if (story.audioName.equals("lunchtime11")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime11);
+        } else if (story.audioName.equals("lunchtime12")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.lunchtime12);
+        } else if (story.audioName.equals("recess1")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess1);
+        } else if (story.audioName.equals("recess2")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess2);
+        } else if (story.audioName.equals("recess3")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess3);
+        } else if (story.audioName.equals("recess4")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess4);
+        } else if (story.audioName.equals("recess5")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess5);
+        } else if (story.audioName.equals("recess6")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess6);
+        } else if (story.audioName.equals("recess7")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess7);
+        } else if (story.audioName.equals("recess8")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess8);
+        } else if (story.audioName.equals("recess9")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess9);
+        } else if (story.audioName.equals("recess10")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess10);
+        } else if (story.audioName.equals("recess11")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess11);
+        } else if (story.audioName.equals("recess12")) {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.recess12);
+        } else {
+            mp = MediaPlayer.create(GameChoiceActivity.this, R.raw.test);
+        }
         int duration = mp.getDuration();
         playSoundButton.setVisibility(View.GONE);
         mp.start();
@@ -148,6 +247,9 @@ public class GameChoiceActivity extends AppCompatActivity {
     }
 
     private void selectedOption(StoryOption option) {
+        if (mp != null) {
+            mp.stop();
+        }
         if (option.isCorrectChoice) {
             story.nextSequence();
             updateViews();
@@ -158,6 +260,7 @@ public class GameChoiceActivity extends AppCompatActivity {
         intent.putExtra("description", option.explanation);
         intent.putExtra("isEndOfGame", story.isEnd());
         intent.putExtra("isCorrectChoice", option.isCorrectChoice);
+        intent.putExtra("optionAudio", option.audioName);
 
         startActivity(intent);
     }

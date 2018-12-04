@@ -1,26 +1,38 @@
-It's lunchtime. You look at the cafeteria menu but you don't like it. What do you do?
 lunch1
+It's lunchtime. You look at the cafeteria menu but you don't like it. What do you do?
+lunchtime1
 Get what's on the menu and say thank you to the lunch lady.
 Perfect! It's always good to eat lunch and be appreciative even though you don't like it.
+lunchtime2
 Not eat.
 Good guess! It's better not to cause a scene just because you don't like something, but you should still eat lunch. Try again.
+lunchtime3
 Get mad at the lunch lady.
 Not quite. You shouldn't get mad at people in public because you don't like something. Try again.
+lunchtime4
 
-After eating, everyone's having fun and you're playing with your friends. You're having fun, but then your friend trips. "Ow that hurts. Oh no, I think I'm bleeding! It hurts...". What do you say?
 lunch2
+After eating, everyone's having fun and you're playing with your friends. You're having fun, but then your friend trips. "Ow that hurts. Oh no, I think I'm bleeding! It hurts...". What do you say?
+lunchtime5
 "Let me go get the nurse."
 Perfect! Your friend is hurt. It's best to go get the nurse so he doesn't have to walk to them.
+lunchtime6
 "Let me help you get to the nurse."
 Good guess! Your friend is hurt and needs to see the nurse. You shouldn't make him walk though - he just got hurt. Try again.
+lunchtime7
 "I didn't do it!"
 Not quite. Remember your friend just got hurt. It doesn't matter who's fault it is. You should make sure he gets better. Try again.
+lunchtime8
 
-You go get the nurse and come back. The nurse takes your friend to fix his scraped knee. The bell rings. You see Nicholas walking to class at the same time as you. What do you say?
 lunch3
+You go get the nurse and come back. The nurse takes your friend to fix his scraped knee. The bell rings. You see Nicholas walking to class at the same time as you. What do you say?
+lunchtime9
 "Are you doing better?"
 Perfect! Your friend got hurt, so it's best to check up on him and see if he's doing better.
+lunchtime10
 Don't say anything until he talks to you.
 Good guess! If your friend wants to talk to you about it, he probably will. But still, your friend got hurt, so it's best to check up on him and see if he's doing better. Try again.
+lunchtime11
 Laugh at him.
 Not quite. You shouldn’t laugh at someone because they got injured. Try again.
+lunchtime12
