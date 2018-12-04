@@ -1,5 +1,5 @@
 recess1
-Is that the school bell? Looks it's time for recess! Everyone rushes outside to play and you get get out the snack mom and dad packed for you. It's your favorite! But then you notice your friend is sad - her parents forgot to pack her a snack. What do you do?
+You're eating your snack during recess when you notice Candice is sad - her parents forgot to pack her a snack. What do you do?
 recess1
 Offer her some of your snack.
 Perfect! You should always share with your friends.
@@ -12,7 +12,7 @@ Not quite. You should always share with your friends. How would you feel if your
 recess4
 
 recess2
-Candice: "Thank you so much _name_! I feel so much better now. Say, do you wanna play a game? It looks like Kevin isn't using his ball. We should borrow it." What do you do?
+After eating, Candice tells you that you should play with Kevin's ball. What do you do?
 recess5
 Ask Kevin, "Can we borrow your ball?"
 Perfect! You should always ask before taking something that isn't yours.

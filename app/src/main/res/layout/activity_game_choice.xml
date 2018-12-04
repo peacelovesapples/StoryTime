@@ -36,13 +36,15 @@
         android:layout_marginTop="35dp"
         android:orientation="vertical"
         android:gravity="center">
+
         <TextView
             android:id="@+id/descriptionText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
             android:text="Kevin the receptionist is waving to you."
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
         <ImageView
             android:layout_marginTop="10dp"
             android:id="@+id/descriptionImage"

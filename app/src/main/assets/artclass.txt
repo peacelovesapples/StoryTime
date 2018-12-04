@@ -1,5 +1,5 @@
 artclass1
-Class is gonna be super fun today! That's because today you have art class. The teacher tells you what to do and you're ready to start fingerpainting. You're having a great time, but then you notice your friend is upset. You look up and see that Nicholas keeps painting on Kevin's art. What do you do?
+During art class, you look up and see that Nicholas keeps painting on Kevin's art. What do you do?
 artclass1
 Tell Nicholas to stop. If he doesn't, call the teacher.
 Perfect! It's good to have an adult help out to fix something. But you should  try to fix it first. Then call an adult if that doesn't work.
@@ -12,7 +12,7 @@ Not quite. When you see something that isn't right, you should do something abou
 artclass4
 
 artclass2
-You hear a thud. When you look down, you see Candice spilled paint all over your painting. "Oh my goodness I'm so sorry! I didn't mean to spill on your painting!" What do you say?
+Candice accidentally spills paint on your artwork and starts apologizing. What do you say?
 artclass5
 "It's okay, it was an accident."
 Perfect! This is a good way to accept Candice’s apology. That's because it tells Candice that it's really okay, and that you know it wasn't on purpose.
@@ -25,7 +25,7 @@ Not quite. It was an accident and Candice said sorry. You should accept her apol
 artclass8
 
 artclass3
-You all keep working on your paintings. At the end of class the teacher tells you all to present your paintings and Candice goes first. "Look, I made a bunny!" Candice tried really hard on her painting, but it doesn't look like a bunny. You don't like it. What do you say?
+At the end of class, Candice presents her artwork and says it is a bunny. However, it doesn't really look like a bunny. What do you say?
 artclass9
 Say something you like about the painting.
 Perfect! Candice worked really hard on this painting. It's best to talk about something you liked about it. If you really didn't like it though, it's okay not to say anything.

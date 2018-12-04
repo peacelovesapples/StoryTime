@@ -1,5 +1,5 @@
 receptionistwaving
-It's time to go to the dentist! Dad wakes you up nice and early because he doesn't want you to be late. You get there right on time. Dad signs you in. Kevin the receptionist says: "Good morning _name_". What do you do?
+You and Dad get to the dentist's office. Kevin the receptionist says good morning. What do you do?
 dentist1
 Say "Good morning."
 Perfect! When someone greets you, it's good to greet them back.
@@ -12,7 +12,7 @@ Not quite. When someone greets you, you should do something to let them know you
 dentist4
 
 dentist2
-Dad signs you in and you sit down to wait. The dentist is running late and you're bored, and you wanna play a game on dad's phone. What do you do?
+While you're waiting, you want to play a game on dad's phone. What do you do?
 dentist5
 Say "Dad, can I play a game on your phone?"
 Perfect! You should always ask before taking something that isn't yours.
@@ -25,7 +25,7 @@ Not quite. You should always ask before taking something that isn't yours. Imagi
 dentist8
 
 dentist3
-Dad gives you his phone and you play your favorite game until the dentist comes to get you. You're still playing when they come. The dentist says, "Good morning _name_". What do you do?
+The dentist comes out and says, "Good morning _name_". What do you do?
 dentist9
 Put the game away and say "Good morning."
 Perfect! When someone greets you, you should greet them back, and when someone wants to talk to you, you should pay attention to them.
