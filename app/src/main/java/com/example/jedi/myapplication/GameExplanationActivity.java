@@ -41,8 +41,6 @@ public class GameExplanationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_explanation);
-        explain_image = (ImageView) findViewById(R.id.imageView4);
-        Picasso.get().load(R.drawable.explaining).into(explain_image);
 
 
         pauseButton = findViewById(R.id.pause);
@@ -108,11 +106,14 @@ public class GameExplanationActivity extends AppCompatActivity {
        // kid.setIm
         File sdCardDirectory = Environment.getExternalStorageDirectory();
         File new_image = new File(sdCardDirectory, "selected.png");
-        if (new_image.exists()) {
+        if (new_image.exists() && isCorrectChoice) {
             ImageView kid = findViewById(R.id.imageView4);
             Picasso.get().load(new_image).resize(750, 750).into(kid);
             //kid.setImageBitmap(BitmapFactory.decodeFile(new_image.getAbsolutePath()));
 
+        } else {
+            explain_image = (ImageView) findViewById(R.id.imageView4);
+            Picasso.get().load(R.drawable.explaining).into(explain_image);
         }
     }
 
